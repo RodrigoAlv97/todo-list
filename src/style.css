@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 9fr;
+}
+
+#header{
+    grid-area: 1/1/2/3 ;
+    background-color: rgb(255, 191, 200);
+}
+
+#sidebar{
+    background-color: rgb(223, 255, 191);
+}
+
+#main{
+    background-color: rgb(191, 204, 255);
+}
+
+#projectList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

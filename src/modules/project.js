@@ -15,4 +15,15 @@ const Project = (name) =>{
     
 }
 
-export {Project}
+const ProjectList = (function() {
+    const list = [];
+
+    const addProject = (value) => {
+        list.push(value);
+    };
+
+    return {list , addProject}
+
+})();
+
+export {Project , ProjectList}

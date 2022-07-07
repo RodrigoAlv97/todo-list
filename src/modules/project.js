@@ -38,7 +38,7 @@ const CurrentProject = (function() {
     }
 
     const getCurrent = () =>{
-        return current.getName()
+        return current
     }
 
     return {getCurrent , setCurrent}

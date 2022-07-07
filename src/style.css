@@ -14,6 +14,8 @@
 #header{
     grid-area: 1/1/2/3 ;
     background-color: rgb(255, 191, 200);
+
+
 }
 
 #sidebar{
@@ -22,10 +24,63 @@
 
 #main{
     background-color: rgb(191, 204, 255);
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding: 20px;
+    gap: 20px;
+
 }
 
 #projectList{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.card{
+    height: 220px;
+    width: 330px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 3fr 1fr;
+    border: 1px solid black;
+    
+}
+
+.cardDescription{
+    grid-area: 2/1/3/3;
+}
+
+.cardName , .cardDescription , .cardDate , .cardPriority {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnEdit , .btnDone{
+    width: 50%;
+}
+
+.cardDate{
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cardName{
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cardPriority{
+    align-items: center;
+    justify-content: center;
 }

@@ -60,11 +60,59 @@ function mainPageLoader () {
             listItem.textContent = element.getName();
             listItem.addEventListener('click' , function () {
                 CurrentProject.setCurrent(element);
-                console.log(CurrentProject.getCurrent());
+                console.log(CurrentProject.getCurrent().getName());
+                taskLoader();
             } )
             projectList.appendChild(listItem);
         });
     }
+
+    function taskLoader () {
+   
+        main.replaceChildren();
+        CurrentProject.getCurrent().getList().forEach(element => {
+            
+            const card = document.createElement('div');
+            card.setAttribute('class' , 'card');
+            
+            const cardName = document.createElement('div');
+            cardName.textContent = element.name;
+            cardName.setAttribute('class' , 'cardName');
+            card.appendChild(cardName);
+
+            const cardDate = document.createElement('div');
+            cardDate.textContent = element.dueDate;
+            cardDate.setAttribute('class' , 'cardDate');
+            card.appendChild(cardDate);
+
+            const cardDescription = document.createElement('div');
+            cardDescription.textContent = element.description;
+            cardDescription.setAttribute('class' , 'cardDescription');
+            card.appendChild(cardDescription);
+
+            const cardPriority = document.createElement('div');
+            cardPriority.textContent = element.priority;
+            cardPriority.setAttribute('class' , 'cardPriority');
+            card.appendChild(cardPriority);
+        
+            const buttons = document.createElement('div');
+            buttons.setAttribute('class' , 'buttons');
+            const btnEdit = document.createElement('button')
+            btnEdit.textContent ="Edit";
+            btnEdit.setAttribute('class' , 'btnEdit');
+            buttons.appendChild(btnEdit);
+            const btnDone = document.createElement('button')
+            btnDone.textContent ="Done";
+            btnDone.setAttribute('class' , 'btnDone');
+            buttons.appendChild(btnDone);
+            card.appendChild(buttons);
+
+           
+            main.appendChild(card);
+      });
+        
+    }
+
 
     function uiLoader () {
         mainPageLoader();
@@ -72,4 +120,4 @@ function mainPageLoader () {
     }
 
 
-    export {mainPageLoader , projectListLoader , uiLoader}
+    export {mainPageLoader , projectListLoader , taskLoader , uiLoader}

@@ -1,6 +1,6 @@
-const Task = (name , desciption , dueDate , priority) => {
+const Task = (name , description , dueDate , priority) => {
 
-    return {name , desciption , dueDate , priority}
+    return {name , description , dueDate , priority}
 }
 
 export {Task}

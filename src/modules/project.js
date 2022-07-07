@@ -1,3 +1,5 @@
+
+
 const Project = (name) =>{
 
     const getName = () => name;
@@ -26,4 +28,21 @@ const ProjectList = (function() {
 
 })();
 
-export {Project , ProjectList}
+const CurrentProject = (function() {
+    let current = ""
+
+    const setCurrent = (value) =>{
+
+        current = value
+
+    }
+
+    const getCurrent = () =>{
+        return current.getName()
+    }
+
+    return {getCurrent , setCurrent}
+
+})();
+
+export {Project , ProjectList , CurrentProject}

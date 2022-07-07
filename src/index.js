@@ -1,7 +1,7 @@
 import './style.css';
 import { Task } from "./modules/task";
-import { Project , ProjectList } from "./modules/project";
-import { pageLoader } from "./modules/ui";
+import { Project , ProjectList , CurrentProject} from "./modules/project";
+import { uiLoader } from "./modules/ui";
 
 
 
@@ -13,9 +13,18 @@ def.addTask(test);
 def.addTask(test2)
 console.log(def.getList());
 
+
+
 ProjectList.addProject(def);
 ProjectList.addProject(def2);
 
 console.log(ProjectList.list);
 
-pageLoader();
+CurrentProject.setCurrent(def);
+console.log('current= ' + CurrentProject.getCurrent());
+CurrentProject.setCurrent(def2);
+console.log('current= ' + CurrentProject.getCurrent());
+
+uiLoader();
+
+export {def}

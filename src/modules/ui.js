@@ -1,6 +1,8 @@
+import { ProjectList , CurrentProject , Project    } from "./project";
 const content = document.querySelector("#content");
 
-function pageLoader () {
+
+function mainPageLoader () {
 
     // Header--------------------------------------------------
     
@@ -29,8 +31,9 @@ function pageLoader () {
         const projectList = document.createElement('ul');
         projectList.textContent = 'Projects';
         projectList.setAttribute('id' , 'projectList');
-    
+
         sidebar.appendChild(projectList);
+
     
         content.appendChild(sidebar);
     
@@ -46,5 +49,27 @@ function pageLoader () {
     }
     //Main--------------------------------------------------
 
+    function projectListLoader(){
 
-    export {pageLoader}
+        const list = ProjectList.list
+
+        list.forEach(element => {
+            const listItem =document.createElement('li');
+            listItem.setAttribute('class' , 'listItem');
+            listItem.setAttribute('data' , list.indexOf(element));
+            listItem.textContent = element.getName();
+            listItem.addEventListener('click' , function () {
+                CurrentProject.setCurrent(element);
+                console.log(CurrentProject.getCurrent());
+            } )
+            projectList.appendChild(listItem);
+        });
+    }
+
+    function uiLoader () {
+        mainPageLoader();
+        projectListLoader();
+    }
+
+
+    export {mainPageLoader , projectListLoader , uiLoader}

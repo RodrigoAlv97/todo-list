@@ -113,6 +113,141 @@ function mainPageLoader () {
         
     }
 
+    function newTaskLoader () {
+
+        const formContainer = document.createElement('div');
+        formContainer.setAttribute('id' , 'formContainer');
+
+    //Form Name--------------------------------------------------
+        
+        const formName = document.createElement('div');
+        formName.setAttribute('class' , 'formItem')
+        const labelName = document.createElement('label');
+        labelName.setAttribute('class' , 'formLabel');
+        labelName.textContent = 'Name: ';
+        formName.appendChild(labelName)
+        const inputName = document.createElement('INPUT');
+        inputName.setAttribute("type", "text");
+        inputName.setAttribute('id' , 'inputName');
+        formName.appendChild(inputName);
+
+        formContainer.appendChild(formName);
+
+    //Form Name--------------------------------------------------
+        
+    
+    //Form Date--------------------------------------------------
+
+        const formDate = document.createElement('div');
+        formDate.setAttribute('class' , 'formItem');
+        const labelDate = document.createElement('label');
+        labelDate.setAttribute('class' , 'formLabel');
+        labelDate.textContent = 'Due Date: ';
+        formDate.appendChild(labelDate);
+        const inputDate = document.createElement('INPUT');
+        inputDate.setAttribute('type' , 'date');
+        inputDate.setAttribute('id' , 'inputDate');
+        formDate.appendChild(inputDate);
+
+        formContainer.appendChild(formDate);
+
+    //Form Date--------------------------------------------------
+
+    //Form Description--------------------------------------------------
+
+        const formDesc = document.createElement('div');
+        formDesc.setAttribute('class' , 'formItem');
+        const labelDesc = document.createElement('label');
+        labelDesc.setAttribute('class' , 'formLabel');
+        labelDesc.textContent = 'Description: ';
+        formDesc.appendChild(labelDesc);
+        const inputDesc = document.createElement('TEXTAREA');
+        inputDesc.setAttribute('class' , 'inputDesc');
+        formDesc.appendChild(inputDesc);
+
+        formContainer.appendChild(formDesc);
+
+
+    //Form Description--------------------------------------------------
+ 
+    //Form Priority--------------------------------------------------
+
+        const formPrio = document.createElement('div');
+        formPrio.setAttribute('class' , 'formItem');
+        const labelPrio = document.createElement('label');
+        labelPrio.setAttribute('class' , 'formLabel');
+        labelPrio.textContent = 'Priority: ';
+        formPrio.appendChild(labelPrio);
+        const inputPrio = document.createElement('SELECT');
+        inputPrio.setAttribute('class' , 'inputPrio');
+        const optionLow = document.createElement("option");
+        optionLow.text = "Low";
+        inputPrio.add(optionLow);
+        const optionMedium = document.createElement("option");
+        optionMedium.text = "Medium";
+        inputPrio.add(optionMedium);
+        const optionHigh = document.createElement("option");
+        optionHigh.text = "High";
+        inputPrio.add(optionHigh);
+        formPrio.appendChild(inputPrio);
+
+        formContainer.appendChild(formPrio);
+
+
+    //Form Priority--------------------------------------------------
+
+        const formProjects = document.createElement('div');
+        formProjects.setAttribute('class' , 'formItem');
+        const labelProjects = document.createElement('label');
+        labelProjects.setAttribute('class' , 'formLabel');
+        labelProjects.textContent = 'Project: ';
+        formProjects.appendChild(labelProjects);
+        const inputProjects = document.createElement('SELECT');
+        
+        
+        
+        const list = ProjectList.list
+
+        list.forEach(element => {
+        const option = document.createElement("option");
+        option.text = element.getName();
+        inputProjects.add(option);
+        });
+
+        formProjects.appendChild(inputProjects)
+        formContainer.appendChild(formProjects)
+
+     
+    //Form project--------------------------------------------------
+
+    
+
+    //Form project--------------------------------------------------
+
+
+    //Form Button--------------------------------------------------
+
+        const formButtons = document.createElement('div');
+        formButtons.setAttribute('class' , 'formItem' )
+        
+        const addBtn = document.createElement('button');
+        addBtn.setAttribute('class' , 'addBtn');
+        addBtn.textContent = 'Add';
+        formButtons.appendChild(addBtn)
+
+        const cancelBtn = document.createElement('button');
+        cancelBtn.setAttribute('class' , 'cancelBtn');
+        cancelBtn.textContent = 'Cancel';
+        formButtons.appendChild(cancelBtn);
+        formContainer.appendChild(formButtons);
+
+    //Form Button--------------------------------------------------
+    
+    
+    main.appendChild(formContainer);
+
+    }
+
 
     function uiLoader () {
         mainPageLoader();
@@ -120,4 +255,4 @@ function mainPageLoader () {
     }
 
 
-    export {mainPageLoader , projectListLoader , taskLoader , uiLoader}
+    export {mainPageLoader , projectListLoader , taskLoader , newTaskLoader , uiLoader}

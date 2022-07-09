@@ -1,7 +1,7 @@
 import './style.css';
 import { Task } from "./modules/task";
 import { Project , ProjectList , CurrentProject} from "./modules/project";
-import { taskLoader, uiLoader} from "./modules/ui";
+import { taskLoader, uiLoader , newTaskLoader} from "./modules/ui";
 
 
 
@@ -25,5 +25,6 @@ console.log('current= ' + CurrentProject.getCurrent().getName());
 CurrentProject.setCurrent(def2);
 console.log('current= ' + CurrentProject.getCurrent().getName());
 uiLoader();
+newTaskLoader();
 
 

@@ -1,3 +1,4 @@
+import { taskLoader } from "./ui";
 
 
 const Project = (name) =>{
@@ -45,4 +46,19 @@ const CurrentProject = (function() {
 
 })();
 
-export {Project , ProjectList , CurrentProject}
+function taskDone() {
+    const card = document.querySelector('.card');
+    let value = card.getAttribute("data");
+    
+    ProjectList.list.forEach(element =>{
+        if (element.getName() == CurrentProject.getCurrent().getName()) {
+            console.log(element.getList());
+            element.getList().splice(value , 1);
+            console.log(element.getList());
+            taskLoader();
+
+        }
+    });
+}
+
+export {Project , ProjectList , CurrentProject , taskDone}

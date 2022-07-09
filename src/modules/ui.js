@@ -1,4 +1,4 @@
-import { ProjectList , CurrentProject , Project    } from "./project";
+import { ProjectList , CurrentProject , Project , taskDone   } from "./project";
 import {Task , addTask } from "./task";
 
 const content = document.querySelector("#content");
@@ -77,6 +77,10 @@ function mainPageLoader () {
             const card = document.createElement('div');
             card.setAttribute('class' , 'card');
             
+            card.setAttribute('data' , CurrentProject.getCurrent().getList().indexOf(element) );
+
+
+
             const cardName = document.createElement('div');
             cardName.textContent = element.name;
             cardName.setAttribute('class' , 'cardName');
@@ -106,6 +110,10 @@ function mainPageLoader () {
             const btnDone = document.createElement('button')
             btnDone.textContent ="Done";
             btnDone.setAttribute('class' , 'btnDone');
+            btnDone.addEventListener('click' , taskDone);
+
+        
+
             buttons.appendChild(btnDone);
             card.appendChild(buttons);
 

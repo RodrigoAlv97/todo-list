@@ -1,4 +1,6 @@
 import { ProjectList , CurrentProject , Project    } from "./project";
+import {Task , addTask } from "./task";
+
 const content = document.querySelector("#content");
 
 
@@ -162,7 +164,7 @@ function mainPageLoader () {
         labelDesc.textContent = 'Description: ';
         formDesc.appendChild(labelDesc);
         const inputDesc = document.createElement('TEXTAREA');
-        inputDesc.setAttribute('class' , 'inputDesc');
+        inputDesc.setAttribute('id' , 'inputDesc');
         formDesc.appendChild(inputDesc);
 
         formContainer.appendChild(formDesc);
@@ -179,7 +181,7 @@ function mainPageLoader () {
         labelPrio.textContent = 'Priority: ';
         formPrio.appendChild(labelPrio);
         const inputPrio = document.createElement('SELECT');
-        inputPrio.setAttribute('class' , 'inputPrio');
+        inputPrio.setAttribute('id' , 'inputPrio');
         const optionLow = document.createElement("option");
         optionLow.text = "Low";
         inputPrio.add(optionLow);
@@ -203,7 +205,7 @@ function mainPageLoader () {
         labelProjects.textContent = 'Project: ';
         formProjects.appendChild(labelProjects);
         const inputProjects = document.createElement('SELECT');
-        
+        inputProjects.setAttribute('id' , 'inputProjects');
         
         
         const list = ProjectList.list
@@ -233,6 +235,7 @@ function mainPageLoader () {
         const addBtn = document.createElement('button');
         addBtn.setAttribute('class' , 'addBtn');
         addBtn.textContent = 'Add';
+        addBtn.addEventListener('click' , addTask);
         formButtons.appendChild(addBtn)
 
         const cancelBtn = document.createElement('button');

@@ -1,4 +1,4 @@
-import styles from './styles/styles.css';
+import './styles/styles.css';
 import Todo from "./modules/todo";
 import Project from './modules/project';
 

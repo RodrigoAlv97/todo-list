@@ -7,5 +7,12 @@ const projectList = [];
 const defaultProject = Project('default');
 projectList.push(defaultProject);
 const currentProject = defaultProject;
+const todo1 = Todo('x', 'y', 'z', '11')
+const todo2 = Todo('xx', 'yy', 'zz', '1111')
+currentProject.addTodo(todo1);
+currentProject.addTodo(todo2);
 
 loadProjects(projectList);
+
+
+export {currentProject}

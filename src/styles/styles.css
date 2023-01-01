@@ -40,6 +40,13 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #dbe4ff;
+  flex-direction: column;
+}
+
+.side-top-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-project {
@@ -48,6 +55,40 @@ body {
   width: 3vh;
   font-size: 1.5rem;
   background-color: #dbe4ff;
+  cursor: pointer;
+}
+
+#project-form {
+  display: flex;
+  display: none;
+}
+
+.input-project-name {
+  display: flex;
+  flex-direction: column;
+  background-color: #dbe4ff;
+  border: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 5px;
+}
+
+.input-project-name input {
+  background-color: #dbe4ff;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+}
+
+.input-project-name label {
+  font-size: 0.7rem;
+  color: rgb(87, 87, 87);
+}
+
+.add-project-button {
+  width: 4rem;
+  margin-left: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.219);
+  background-color: #dbe4ff;
+  cursor: pointer;
 }
 
 #main {

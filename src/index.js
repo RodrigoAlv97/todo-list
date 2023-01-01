@@ -1,18 +1,27 @@
 import './styles/styles.css';
-import Todo from "./modules/todo";
-import Project from './modules/project';
 import loadProjects from './modules/loadProjectList';
+import { toggleElement } from './modules/toggleElement';
+import { addProject } from './modules/addProject';
+import { clearProjectForm } from './modules/clearProjectForm';
+
+const showProjectForm = document.querySelector('.add-project')
+const projectForm = document.querySelector('#project-form');
+const addProjectButton = document.querySelector('.add-project-button')
 
 const projectList = [];
-const defaultProject = Project('default');
-projectList.push(defaultProject);
-const currentProject = defaultProject;
-const todo1 = Todo('x', 'y', 'z', '11')
-const todo2 = Todo('xx', 'yy', 'zz', '1111')
-currentProject.addTodo(todo1);
-currentProject.addTodo(todo2);
 
 loadProjects(projectList);
 
+showProjectForm.addEventListener('click', () => {
+  clearProjectForm()
+  toggleElement(projectForm)
 
-export {currentProject}
+});
+addProjectButton.addEventListener('click', () => {
+  addProject(projectList)
+  clearProjectForm()
+  loadProjects(projectList)
+})
+
+
+export { projectList }

@@ -1,17 +1,16 @@
-import { selectCurrentProject } from "./selectCurrent";
 import { showCurrentList } from "./showCurrentList";
-import { currentProject } from "..";
 
 const projectList = document.querySelector('.side-bot');
 const todoList = document.querySelector('.main-bot');
 
 const loadProjects = (arr) => {
-  arr.forEach(element => {
+  projectList.replaceChildren ()
+  arr.forEach((element , index) => {
     const project = document.createElement('div');
     project.textContent = element.name;
+    project.setAttribute('data' , `${index}`)
     project.addEventListener('click' , () => {
-      selectCurrentProject(currentProject , element)
-      showCurrentList(currentProject.list , todoList)
+      showCurrentList(element.list , todoList)
     })
     projectList.appendChild(project)
   });

@@ -58,6 +58,24 @@ body {
   cursor: pointer;
 }
 
+.project-list-item{
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.project-list-name{
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.project-list-btn{
+  border: none;
+  background-color: #dbe4ff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 #project-form {
   display: flex;
   display: none;

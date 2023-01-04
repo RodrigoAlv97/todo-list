@@ -14,21 +14,22 @@
 
       <div id="side">
         <div class="side-top">
-          <div class="side-top-wrapper">
-            <span class="project-list-title">Project List</span>
-            <button class="add-project">+</button>
+            <span class="project-list-title">Add new project</span>
+
+            <div id="project-form">
+              <div class="input-project-name">
+                <label>Name</label>
+                <input class="project-name" type="text" />
+              </div>
+              <button class="add-project-button">Add</button>
+            </div>
+          </div>
+          <div class="side-bot"></div>
           </div>
 
-          <div id="project-form">
-            <div class="input-project-name">
-              <label>Name</label>
-              <input class="project-name" type="text" />
-            </div>
-            <button class="add-project-button">Add</button>
-          </div>
-        </div>
-        <div class="side-bot"></div>
-      </div>
+     
+        
+      
 
       <div id="main">
         <div class="main-top">
@@ -37,6 +38,7 @@
         <div class="main-bot"></div>
       </div>
     </div>
+  </div>
 
     <div id="footer">
       <a
@@ -46,5 +48,49 @@
         >GitHub</a
       >
     </div>
+    <div id="todo-form-container">
+      <div id="todo-form">
+        <div class="form-title">
+          <div>Add todo</div>
+        </div>
+
+        <div class="todo-form-title">
+          <div class="todo-form-title-wrapper">
+            <label>Name</label>
+            <input type="text">
+          </div>
+        </div>
+
+        <div class="todo-form-desc">
+          <textarea placeholder="Descripton..." name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="todo-form-date">
+          <input type="date">
+        </div>
+
+        <div class="todo-form-priority">
+          <select name="prority" id="prority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <div class="todo-form-project">
+          <select class="project-selector" name="project-selector" id="project-selector">
+
+          </select>
+        </div>
+
+        <div class="todo-form-buttons">
+          <button class="todo-form-btn-add">Add</button>
+          <button class="todo-form-btn-cancel">Cancel</button>
+        </div>
+
+
+      </div>
+    </div>
+
   </body>
 </html>

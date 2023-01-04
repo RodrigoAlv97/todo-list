@@ -1,26 +1,34 @@
 import './styles/styles.css';
 import loadProjects from './modules/loadProjectList';
-import { toggleElement } from './modules/toggleElement';
+import { hideElement, showElement } from './modules/toggleElement';
 import { addProject } from './modules/addProject';
 import { clearProjectForm } from './modules/clearProjectForm';
+import { fillProjectSelector } from './modules/fillProjectSelector';
 
-const showProjectForm = document.querySelector('.add-project')
-const projectForm = document.querySelector('#project-form');
+const todoForm = document.querySelector('#todo-form-container')
 const addProjectButton = document.querySelector('.add-project-button')
+const addTodoButton = document.querySelector('.add-todo')
+const cancelTodoForm = document.querySelector('.todo-form-btn-cancel')
 
 const projectList = [];
 
 loadProjects(projectList);
 
-showProjectForm.addEventListener('click', () => {
-  clearProjectForm()
-  toggleElement(projectForm)
-
-});
 addProjectButton.addEventListener('click', () => {
   addProject(projectList)
   clearProjectForm()
   loadProjects(projectList)
+})
+
+addTodoButton.addEventListener('click' , () => {
+    
+  fillProjectSelector(projectList)
+  showElement(todoForm , 'block')
+
+})
+
+cancelTodoForm.addEventListener('click', () => {
+  hideElement(todoForm)
 })
 
 

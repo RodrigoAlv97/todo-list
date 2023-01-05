@@ -35,6 +35,7 @@ cancelTodoForm.addEventListener('click', () => {
 
 addTodoForm.addEventListener('click', () => {
   addTodo()
+  hideElement(todoForm)
 })
 
 export { projectList }

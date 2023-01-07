@@ -178,10 +178,74 @@ body {
 
 
 #todo-form {
-  background-color: #fefefe;
+  background-color: #dbe4ff;
   margin: 4% auto; 
   padding: 20px;
   border: 1px solid rgb(131, 131, 131);
   width: 25%;
   height: 75%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr;
+}
+
+.form-title{
+  display: flex;
+
+  justify-content: center;
+}
+
+.todo-form-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #dbe4ff;
+  border: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 5px;
+}
+
+.todo-form-title-wrapper label {
+  font-size: 0.7rem;
+  color: rgb(87, 87, 87);
+}
+
+.todo-form-title-wrapper input {
+  background-color: #dbe4ff;
+  border: none;
+  outline: none;
+  font-size: 0.8rem;
+}
+
+.input-todo-desc{
+  background-color: #dbe4ff;
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.input-todo-date{
+  background-color: #dbe4ff;
+  outline: none;
+}
+
+.priority-selector ,
+.project-selector {
+  background-color: #dbe4ff;
+  outline: none;
+}
+
+.todo-form-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-form-btn-add,
+.todo-form-btn-cancel{
+  width: 4rem;
+  height: 2rem;
+  margin-left: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.219);
+  background-color: #dbe4ff;
+  cursor: pointer;
 }

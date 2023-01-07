@@ -5,6 +5,7 @@ import { addProject } from './modules/addProject';
 import { clearProjectForm } from './modules/clearProjectForm';
 import { fillProjectSelector } from './modules/fillProjectSelector';
 import { addTodo } from './modules/addTodo';
+import { clearTodoForm } from './modules/clearTodoForm';
 
 const todoForm = document.querySelector('#todo-form-container')
 const addProjectButton = document.querySelector('.add-project-button')
@@ -31,11 +32,13 @@ addTodoButton.addEventListener('click' , () => {
 
 cancelTodoForm.addEventListener('click', () => {
   hideElement(todoForm)
+  clearTodoForm()
 })
 
 addTodoForm.addEventListener('click', () => {
   addTodo()
   hideElement(todoForm)
+  clearTodoForm()
 })
 
 export { projectList }

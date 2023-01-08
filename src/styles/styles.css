@@ -2,6 +2,7 @@
   --mainColor: #dcffa8;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,18 @@
 
 body {
   overflow-x: hidden;
+
+  @font-face {
+    font-family: 'Roboto-Blod';
+    src: url(../fonts/RobotoMono-Bold.ttf);
+    font-family: 'Roboto-Italic';
+    src: url(../fonts/RobotoMono-Italic.ttf);
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/RobotoMono-Regular.ttf);
+    font-family: 'Roboto-Light';
+    src: url(../fonts/RobotoMono-Light.ttf);
+  }
+
 }
 
 #content {
@@ -27,6 +40,7 @@ body {
   align-items: center;
   padding: 10px;
   font-size: 2rem;
+  font-family: 'Roboto-Light';
 }
 
 #side {
@@ -221,17 +235,20 @@ body {
   outline: none;
   padding: 5px;
   box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.226);
 }
 
 .input-todo-date{
   background-color: #dbe4ff;
   outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.226);
 }
 
 .priority-selector ,
 .project-selector {
   background-color: #dbe4ff;
   outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.226);
 }
 
 .todo-form-buttons{

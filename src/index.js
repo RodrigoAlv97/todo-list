@@ -15,7 +15,6 @@ const addTodoForm = document.querySelector('.todo-form-btn-add')
 
 const projectList = [];
 
-loadProjects(projectList);
 
 addProjectButton.addEventListener('click', () => {
   addProject(projectList)

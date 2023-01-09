@@ -1,3 +1,5 @@
+import { getPrioColor } from "./getPrioColor";
+
 const createCards = (arr , target) =>{
   arr.forEach(element => {
     const card = document.createElement('div')
@@ -10,6 +12,7 @@ const createCards = (arr , target) =>{
     dueDate.textContent = element.dueDate
     const priority = document.createElement('div')
     priority.textContent = element.priority
+    card.style.backgroundColor = `${getPrioColor(element.priority)}`
     card.appendChild(title)
     card.appendChild(desc)
     card.appendChild(dueDate)

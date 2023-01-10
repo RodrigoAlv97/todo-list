@@ -19,7 +19,6 @@ export const addTodo = () => {
  
   projectList.forEach(project => {
     if (project.name === projectName.value) {
-      console.log(project)
       project.addTodo(newTodo)
     }
   })

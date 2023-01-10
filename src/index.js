@@ -29,13 +29,14 @@ addTodoButton.addEventListener('click' , () => {
 
 })
 
-cancelTodoForm.addEventListener('click', () => {
+addTodoForm.addEventListener('click', (e) => {
+  e.preventDefault();
+  addTodo()
   hideElement(todoForm)
   clearTodoForm()
 })
 
-addTodoForm.addEventListener('click', () => {
-  addTodo()
+cancelTodoForm.addEventListener('click', () => {
   hideElement(todoForm)
   clearTodoForm()
 })

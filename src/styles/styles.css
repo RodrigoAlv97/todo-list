@@ -1,8 +1,6 @@
 :root {
-  --mainColor: #befdc8;
-  
+  --mainColor: #fdf4be;
 }
-
 
 * {
   margin: 0;
@@ -174,8 +172,6 @@ body {
   color: black;
 }
 
-
-
 #todo-form-container {
   display: none; 
   position: fixed; 
@@ -200,6 +196,9 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr;
   font-size: 1.1em;
+  font-family: 'Roboto-L';
+  color: rgb(87, 87, 87);
+  border-radius: 10px;
 }
 
 .form-title{
@@ -214,6 +213,8 @@ body {
   background-color: var(--mainColor);
   border: 1px solid rgba(0, 0, 0, 0.226);
   padding: 5px;
+  color: rgb(87, 87, 87);
+  border-radius: 10px;
  
 }
 
@@ -238,6 +239,7 @@ body {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.226);
   font-size: 1.1em;
+  border-radius: 10px;
 }
 
 .input-todo-date{
@@ -245,6 +247,9 @@ body {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.226);
   font-size: 1.1em;
+  font-family: 'Roboto-L';
+  border-radius: 10px;
+  color: rgb(87, 87, 87);
 }
 
 .priority-selector ,
@@ -253,23 +258,29 @@ body {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.226);
   font-size: 1.1em;
+  font-family: 'Roboto-L';
+  border-radius: 10px;
+  color: rgb(87, 87, 87);
 }
 
 .todo-form-buttons{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .todo-form-btn-add,
 .todo-form-btn-cancel{
-  width: 4rem;
-  height: 2rem;
+  width: 120px;
+  height: 40px;
   margin-left: 10px;
   border: solid 1px rgba(0, 0, 0, 0.219);
   background-color: var(--mainColor);
   cursor: pointer;
   font-size: 1.1em;
+  font-family: 'Roboto-L';
+  border-radius: 10px;
 }
 
 .card {

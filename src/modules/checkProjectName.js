@@ -4,7 +4,8 @@ export const checkProjectName = (name) => {
   let res = false;
   projectList.forEach(element => {
     
-    if (element.name === name) {
+    if (element.name === name ) {
+     console.log(name)
      res = true 
     }
   });

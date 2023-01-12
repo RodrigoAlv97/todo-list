@@ -36,7 +36,8 @@ addTodoForm.addEventListener('click', (e) => {
   clearTodoForm()
 })
 
-cancelTodoForm.addEventListener('click', () => {
+cancelTodoForm.addEventListener('click', (e) => {
+  e.preventDefault();
   hideElement(todoForm)
   clearTodoForm()
 })

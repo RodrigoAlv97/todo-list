@@ -2,15 +2,15 @@ export const getPrioColor = (prio) => {
 
   switch (prio) {
     case 'Low':
-      return '#73ff77'
+      return '#d4fdbe'
       break;
     
       case 'Medium':
-      return '#ffff73'
+      return '#fdf4be'
         break;
 
         case 'High':
-          return '#ff7373'
+          return '#fdcbbe'
       break;
 
     default:

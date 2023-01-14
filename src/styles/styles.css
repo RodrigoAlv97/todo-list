@@ -149,7 +149,17 @@ body {
   background-color: var(--mainColor);
   justify-self: center;
   margin-bottom: 8vh;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.103);
+  display: grid;
 }
+
+.delete-card{
+  border: none;
+  justify-self: flex-end;
+  font-size: 1.2rem;
+}
+
+
 
 .add-todo {
   border: none;
